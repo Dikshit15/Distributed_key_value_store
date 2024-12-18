@@ -1,4 +1,3 @@
-
 class KeyValueStore:
     def __init__(self, store):
         self.store = store
@@ -8,6 +7,9 @@ class KeyValueStore:
 
     def get(self, key):
         return self.store.get(key, None)
+
+    def delete(self, key):
+        self.store.pop(key, None)
 
 
 if __name__ == '__main__':
